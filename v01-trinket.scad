@@ -48,4 +48,9 @@ module trinket() {
         cylinder(d=0.5, h=L);
 };
 
-trinket();
+for (i = [0:2]) {
+    for (j = [0:2]) {
+        translate([i*(1.5*S), j*(1.5*S), 0])
+            trinket();
+    }
+}

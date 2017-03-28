@@ -2,6 +2,7 @@ HEIGHT=8;
 $fn = 120;
 S = 20;
 
+module trinket() {
 color([.5,1,1])
 translate([0,0,-HEIGHT/2])
 difference() {
@@ -38,3 +39,11 @@ difference() {
         }
     }
 };
+};
+
+for (i = [0:2]) {
+    for (j = [0:2]) {
+        translate([i*(1.5*S), j*(1.5*S), 0])
+            trinket();
+    }
+}
